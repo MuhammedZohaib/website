@@ -1,0 +1,175 @@
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+
+export default function Home() {
+  return (
+    <div className="flex flex-col">
+      {/* Hero Section */}
+      <section className="relative h-[60vh] flex items-center">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero.svg"
+            alt="Background"
+            width={600}
+            height={1600}
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+        </div>
+        <div className="container mx-auto px-4 z-10">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">
+            Bringing Creative{" "}
+            <span className="text-primary">Ideas to Life</span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
+            I'm a passionate developer specializing in creating exceptional
+            digital experiences through innovative design and development.
+          </p>
+          <Button asChild size="lg">
+            <Link href="/contact">Get in Touch</Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* About Preview Section */}
+      <section className="py-16 bg-zinc-950">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">About Me</h2>
+              <p className="text-gray-300 mb-6">
+                I'm a skilled developer with expertise in creating modern,
+                responsive, and user-friendly web applications. With a strong
+                foundation in both design and development, I bring a unique
+                perspective to every project.
+              </p>
+              <Button variant="outline" asChild>
+                <Link href="/about">Learn More</Link>
+              </Button>
+            </div>
+            <div className="relative aspect-square max-w-md mx-auto">
+              <div className="absolute inset-0 bg-primary/20 rounded-lg -rotate-6"></div>
+              <div className="absolute inset-0 bg-zinc-900 rounded-lg border border-primary/50 overflow-hidden">
+                <Image
+                  src="/placeholder.svg?height=500&width=500"
+                  alt="Profile"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Preview */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-12 text-center">My Expertise</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {[
+              { name: "Web Development", icon: "Code" },
+              { name: "UI/UX Design", icon: "Palette" },
+              { name: "Mobile Apps", icon: "Smartphone" },
+              { name: "Responsive Design", icon: "Layers" },
+              { name: "Frontend", icon: "Layout" },
+              { name: "Backend", icon: "Database" },
+              { name: "Performance", icon: "Zap" },
+              { name: "SEO", icon: "Search" },
+            ].map((skill, index) => (
+              <div
+                key={index}
+                className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 hover:border-primary/50 transition-all"
+              >
+                <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-primary text-xl">
+                    {/* This is a placeholder for the icon - we'll import the actual icons in the header component */}
+                    {skill.icon[0]}
+                  </span>
+                </div>
+                <h3 className="font-medium text-lg">{skill.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects */}
+      <section className="py-16 bg-zinc-950">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center mb-12">
+            <h2 className="text-3xl font-bold">Featured Projects</h2>
+            <Button variant="outline" asChild>
+              <Link href="/work">View All</Link>
+            </Button>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[1, 2, 3].map((project) => (
+              <Link
+                href={`/work/project-${project}`}
+                key={project}
+                className="group"
+              >
+                <div className="bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 group-hover:border-primary/50 transition-all">
+                  <div className="relative aspect-video">
+                    <Image
+                      src={`/placeholder.svg?height=300&width=600`}
+                      alt={`Project ${project}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                      Project {project}
+                    </h3>
+                    <p className="text-gray-400 mb-4">
+                      A brief description of this amazing project and the
+                      technologies used.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {["React", "Next.js", "Tailwind"].map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-xs bg-zinc-800 text-gray-300 px-2 py-1 rounded"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 relative">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/placeholder.svg?height=600&width=1600"
+            alt="Background"
+            fill
+            className="object-cover opacity-20"
+          />
+        </div>
+        <div className="container mx-auto px-4 z-10 relative text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Let's Work Together
+          </h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Have a project in mind? I'd love to hear about it. Let's discuss how
+            we can bring your ideas to life.
+          </p>
+          <Button asChild size="lg">
+            <Link href="/contact">Start a Project</Link>
+          </Button>
+        </div>
+      </section>
+    </div>
+  );
+}

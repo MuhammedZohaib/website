@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
+import { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/home", // Change to your desired default route
+        permanent: false, // Set to true if this should be a permanent redirect
+      },
+    ];
+  },
 };
 
 export default nextConfig;
