@@ -27,11 +27,11 @@ export default function About() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="relative aspect-square max-w-md mx-auto">
+            <div className="relative aspect-square max-w-md mx-full">
               <div className="absolute inset-0 bg-primary/20 rounded-lg -rotate-6"></div>
               <div className="absolute inset-0 bg-zinc-900 rounded-lg border border-primary/50 overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=500&width=500"
+                  src="/headshot.jpg"
                   alt="Profile"
                   fill
                   className="object-cover"

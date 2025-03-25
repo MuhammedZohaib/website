@@ -110,7 +110,7 @@ export default function Footer() {
                   />
                 </a>
                 <a
-                  href="#"
+                  href="https://github.com/MuhammedZohaib"
                   className="w-8 h-8 bg-zinc-900 rounded-full flex items-center justify-center border border-zinc-800 hover:border-primary/50 transition-all"
                 >
                   <Github

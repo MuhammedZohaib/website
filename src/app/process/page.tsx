@@ -9,7 +9,7 @@ export default function Process() {
       <section className="relative h-[40vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=600&width=1600"
+            src="/hero.svg"
             alt="Background"
             fill
             className="object-cover opacity-30"
@@ -117,10 +117,10 @@ export default function Process() {
       <section className="py-20 bg-zinc-950 relative">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=600&width=1600"
+            src="/bg-img.svg"
             alt="Background"
             fill
-            className="object-cover opacity-10"
+            className="object-cover opacity-20"
           />
         </div>
         <div className="container mx-auto px-4 text-center z-10 relative">
