@@ -23,7 +23,7 @@ export default function Contact() {
         <div className="container mx-auto px-4 z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">Contact Me</h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl">
-            Let's discuss how we can bring your digital ideas to life.
+            Let&apos;s discuss how we can bring your digital ideas to life.
           </p>
         </div>
       </section>
@@ -35,10 +35,10 @@ export default function Contact() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
               <p className="text-gray-300 mb-8">
-                I'm always interested in hearing about new projects and
+                I&apos;m always interested in hearing about new projects and
                 opportunities. Whether you have a question about my services,
                 want to discuss a potential collaboration, or just want to say
-                hello, I'd love to hear from you.
+                hello, I&apos;d love to hear from you.
               </p>
 
               <div className="space-y-6">

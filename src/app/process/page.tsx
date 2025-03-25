@@ -35,7 +35,7 @@ export default function Process() {
             client-centric approach.
           </p>
           <p className="text-gray-300 mb-8">
-            Here's an overview of my typical process:
+            Here&apos;s an overview of my typical process:
           </p>
         </div>
       </section>
@@ -85,7 +85,7 @@ export default function Process() {
                 number: "07",
                 title: "Post-Launch Support",
                 content:
-                  "Our commitment to your success doesn't end with the launch. We provide ongoing support and maintenance services to ensure your digital product continues to perform optimally. This includes addressing any issues, implementing feature enhancements, security updates, and technical support.",
+                  "Our commitment to your success doesn&apos;t end with the launch. We provide ongoing support and maintenance services to ensure your digital product continues to perform optimally. This includes addressing any issues, implementing feature enhancements, security updates, and technical support.",
               },
               {
                 number: "08",
@@ -128,8 +128,9 @@ export default function Process() {
             Ready to Start Your Project?
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            I'd love to hear about your project and discuss how we can bring
-            your digital ideas to life. Let's create something amazing together.
+            I&apos;d love to hear about your project and discuss how we can
+            bring your digital ideas to life. Let&apos;s create something
+            amazing together.
           </p>
           <Button asChild size="lg">
             <Link href="/contact">Get Started</Link>

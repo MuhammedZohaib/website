@@ -64,7 +64,7 @@ export default function Home() {
             to Life
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
-            I'm a passionate developer specializing in creating exceptional
+            I&apos;m a passionate developer specializing in creating exceptional
             digital experiences through innovative design and development.
           </p>
           <Button asChild size="lg">
@@ -92,7 +92,7 @@ export default function Home() {
             <div>
               <h2 className="text-3xl font-bold mb-6">About Me</h2>
               <p className="text-gray-300 mb-6">
-                I'm a skilled developer with expertise in creating modern,
+                I&apos;m a skilled developer with expertise in creating modern,
                 responsive, and user-friendly web applications. With a strong
                 foundation in both design and development, I bring a unique
                 perspective to every project.
@@ -230,11 +230,11 @@ export default function Home() {
         </div>
         <div className="container mx-auto px-4 z-10 relative text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Let's Work Together
+            Let&apos;s Work Together
           </h2>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it. Let's discuss how
-            we can bring your ideas to life.
+            Have a project in mind? I&apos;d love to hear about it. Let&apos;s
+            discuss how we can bring your ideas to life.
           </p>
           <Button asChild size="lg">
             <Link href="/contact">Start a Project</Link>

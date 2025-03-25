@@ -41,15 +41,15 @@ export default function About() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Who I Am</h2>
               <p className="text-gray-300 mb-4">
-                I'm a passionate developer with a keen eye for design and a love
-                for creating exceptional digital experiences. With expertise in
-                web and mobile development, I bring ideas to life through clean
-                code and intuitive interfaces.
+                I&apos;m a passionate developer with a keen eye for design and a
+                love for creating exceptional digital experiences. With
+                expertise in web and mobile development, I bring ideas to life
+                through clean code and intuitive interfaces.
               </p>
               <p className="text-gray-300 mb-4">
                 My journey in the tech world began over 5 years ago, and since
-                then, I've been constantly learning and evolving my skills to
-                stay at the forefront of digital innovation.
+                then, I&apos;ve been constantly learning and evolving my skills
+                to stay at the forefront of digital innovation.
               </p>
               <p className="text-gray-300">
                 I believe in a user-centered approach to development, ensuring
@@ -73,7 +73,7 @@ export default function About() {
                 number: "02",
                 title: "Development",
                 content:
-                  "With a strong foundation in coding and development, I build robust, scalable, and cutting-edge digital solutions. I'm proficient in various programming languages and frameworks, allowing me to transform designs into fully functional applications.",
+                  "With a strong foundation in coding and development, I build robust, scalable, and cutting-edge digital solutions. I&apos;m proficient in various programming languages and frameworks, allowing me to transform designs into fully functional applications.",
               },
               {
                 number: "03",
