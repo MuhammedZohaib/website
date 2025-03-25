@@ -4,6 +4,17 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Typewriter } from "react-simple-typewriter";
 
+import {
+  Code,
+  Palette,
+  Smartphone,
+  Layers,
+  Layout,
+  Database,
+  Zap,
+  Search,
+} from "lucide-react";
+
 export default function Home() {
   return (
     <div className="flex flex-col">
@@ -15,7 +26,7 @@ export default function Home() {
             src="/hero.svg"
             alt="Background"
             fill
-            className="object-cover opacity-30"
+            className="object-contain opacity-30"
             priority
           />
         </div>
@@ -26,7 +37,7 @@ export default function Home() {
             src="/hero-mobile.svg"
             alt="Mobile Background"
             fill
-            className="object-contain opacity-30"
+            className="object-cover opacity-30"
             priority
           />
         </div>
@@ -63,17 +74,20 @@ export default function Home() {
       </section>
 
       {/* About Preview Section */}
-      <section className="py-16 bg-zinc-950">
-        <div className="relative container mx-auto px-4">
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/hero.svg"
-              alt="Background"
-              fill
-              className="object-contain opacity-30"
-              priority
-            />
-          </div>
+      <section className="relative py-16 bg-zinc-950">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <Image
+            src="/bg-img.svg"
+            alt="Background"
+            fill
+            className="object-cover opacity-30"
+            priority
+          />
+        </div>
+
+        {/* Foreground Content */}
+        <div className="relative container mx-auto px-4 z-10">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">About Me</h2>
@@ -94,7 +108,7 @@ export default function Home() {
                   src="/headshot.jpg"
                   alt="Profile"
                   fill
-                  className="absolute top-0 left-0 object-cover"
+                  className="object-cover opacity-40"
                 />
               </div>
             </div>
@@ -102,30 +116,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills Preview */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">My Expertise</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {[
-              { name: "Web Development", icon: "Code" },
-              { name: "UI/UX Design", icon: "Palette" },
-              { name: "Mobile Apps", icon: "Smartphone" },
-              { name: "Responsive Design", icon: "Layers" },
-              { name: "Frontend", icon: "Layout" },
-              { name: "Backend", icon: "Database" },
-              { name: "Performance", icon: "Zap" },
-              { name: "SEO", icon: "Search" },
+              { name: "Web Development", icon: <Code /> },
+              { name: "UI/UX Design", icon: <Palette /> },
+              { name: "Mobile Apps", icon: <Smartphone /> },
+              { name: "Responsive Design", icon: <Layers /> },
+              { name: "Frontend", icon: <Layout /> },
+              { name: "Backend", icon: <Database /> },
+              { name: "Performance", icon: <Zap /> },
+              { name: "SEO", icon: <Search /> },
             ].map((skill, index) => (
               <div
                 key={index}
                 className="bg-zinc-900 p-6 rounded-lg border border-zinc-800 hover:border-primary/50 transition-all"
               >
                 <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-4">
-                  <span className="text-primary text-xl">
-                    {/* This is a placeholder for the icon - we'll import the actual icons in the header component */}
-                    {skill.icon[0]}
-                  </span>
+                  <span className="text-primary text-xl">{skill.icon}</span>
                 </div>
                 <h3 className="font-medium text-lg">{skill.name}</h3>
               </div>
@@ -144,31 +154,54 @@ export default function Home() {
             </Button>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((project) => (
+            {[
+              {
+                name: "ASD Detection",
+                description:
+                  "A system for detecting Autism Spectrum Disorder (ASD) in children using speech and facial cues.",
+                tech: ["Deep Learning", "Computer Vision", "FastAPI"],
+                image: "/image.jpg",
+                link: "https://github.com/MuhammedZohaib/FYP-2025.git",
+              },
+              {
+                name: "Tech Job Finder",
+                description:
+                  "An Electron.js-based desktop application that helps job seekers find and apply to tech companies worldwide.",
+                tech: ["Electron.js", "JavaScript", "Tailwind"],
+                image: "/tech-comp.png",
+                link: "https://github.com/MuhammedZohaib/GlobalTechJobs.git",
+              },
+              {
+                name: "HitFit Gym App",
+                description:
+                  "A Java based Gym Management App with login/signup and admin features for streamlined gym operations.",
+                tech: ["Java", "JavaFX", "PostgreSQL"],
+                image: "/gym.png",
+                link: "https://github.com/MuhammedZohaib/HitFit-Gym-App.git",
+              },
+            ].map((project, index) => (
               <Link
-                href={`/work/project-${project}`}
-                key={project}
+                href={project.link}
+                key={index}
+                target="_blank"
                 className="group"
               >
                 <div className="bg-zinc-900 rounded-lg overflow-hidden border border-zinc-800 group-hover:border-primary/50 transition-all">
                   <div className="relative aspect-video">
                     <Image
-                      src={`/placeholder.svg?height=300&width=600`}
-                      alt={`Project ${project}`}
+                      src={project.image}
+                      alt={project.name}
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                      Project {project}
+                      {project.name}
                     </h3>
-                    <p className="text-gray-400 mb-4">
-                      A brief description of this amazing project and the
-                      technologies used.
-                    </p>
+                    <p className="text-gray-400 mb-4">{project.description}</p>
                     <div className="flex flex-wrap gap-2">
-                      {["React", "Next.js", "Tailwind"].map((tag) => (
+                      {project.tech.map((tag) => (
                         <span
                           key={tag}
                           className="text-xs bg-zinc-800 text-gray-300 px-2 py-1 rounded"
@@ -189,7 +222,7 @@ export default function Home() {
       <section className="py-20 relative">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=600&width=1600"
+            src="/bg-img.svg"
             alt="Background"
             fill
             className="object-cover opacity-20"
