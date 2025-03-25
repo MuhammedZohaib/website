@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utilis";
 import * as React from "react";
 
-interface Props extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+type Props = React.TextareaHTMLAttributes<HTMLTextAreaElement>;
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, Props>(
   ({ className, ...props }, ref) => {

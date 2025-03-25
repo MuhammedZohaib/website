@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utilis";
 import * as React from "react";
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {}
+type Props = React.InputHTMLAttributes<HTMLInputElement>;
 
 const Input = React.forwardRef<HTMLInputElement, Props>(
   ({ className, type, ...props }, ref) => {
