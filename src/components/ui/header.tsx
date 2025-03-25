@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { Button } from "./button";
+import Image from "next/image";
 import { cn } from "@/lib/utilis";
 
 export default function Header() {
@@ -31,9 +32,15 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
-              <span className="text-black font-bold text-lg">YN</span>
+              <span className="text-black font-bold text-lg">
+                <Image
+                  src={"/logo.svg"}
+                  width={25}
+                  height={25}
+                  alt={""}
+                ></Image>
+              </span>
             </div>
-            <span className="ml-2 font-bold text-lg">YourName</span>
           </Link>
 
           {/* Desktop Navigation */}

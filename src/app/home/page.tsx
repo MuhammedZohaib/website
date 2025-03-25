@@ -1,27 +1,56 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center">
-        <div className="absolute inset-0 z-0">
+      <section className="relative h-[100vh] flex items-center">
+        {/* Desktop Background Image */}
+        <div className="absolute inset-0 z-0 hidden md:block">
           <Image
             src="/hero.svg"
             alt="Background"
-            width={600}
-            height={1600}
             fill
             className="object-cover opacity-30"
             priority
           />
         </div>
-        <div className="container mx-auto px-4 z-10">
+
+        {/* Mobile Background Image */}
+        <div className="absolute inset-0 z-0 md:hidden">
+          <Image
+            src="/hero-mobile.svg"
+            alt="Mobile Background"
+            fill
+            className="object-contain opacity-30"
+            priority
+          />
+        </div>
+
+        {/* Hero Content */}
+        <div className="container mx-auto px-4 z-10 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Bringing Creative{" "}
-            <span className="text-primary">Ideas to Life</span>
+            Bringing{" "}
+            <span className="text-primary">
+              <Typewriter
+                words={[
+                  "Creative Ideas",
+                  "Innovative Designs",
+                  "Unique Solutions",
+                ]}
+                loop={0}
+                cursor
+                cursorStyle="_"
+                typeSpeed={80}
+                deleteSpeed={50}
+                delaySpeed={1500}
+              />
+            </span>{" "}
+            to Life
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl">
             I'm a passionate developer specializing in creating exceptional
@@ -35,7 +64,16 @@ export default function Home() {
 
       {/* About Preview Section */}
       <section className="py-16 bg-zinc-950">
-        <div className="container mx-auto px-4">
+        <div className="relative container mx-auto px-4">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/hero.svg"
+              alt="Background"
+              fill
+              className="object-contain opacity-30"
+              priority
+            />
+          </div>
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">About Me</h2>
@@ -49,14 +87,14 @@ export default function Home() {
                 <Link href="/about">Learn More</Link>
               </Button>
             </div>
-            <div className="relative aspect-square max-w-md mx-auto">
+            <div className="relative aspect-square max-w-md mx-full">
               <div className="absolute inset-0 bg-primary/20 rounded-lg -rotate-6"></div>
               <div className="absolute inset-0 bg-zinc-900 rounded-lg border border-primary/50 overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=500&width=500"
+                  src="/headshot.jpg"
                   alt="Profile"
                   fill
-                  className="object-cover"
+                  className="absolute top-0 left-0 object-cover"
                 />
               </div>
             </div>

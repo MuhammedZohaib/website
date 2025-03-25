@@ -11,7 +11,7 @@ const barlow = Barlow({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name | Portfolio",
+  title: "Zohaib | Portfolio",
   description:
     "Personal portfolio showcasing my skills, projects, and experience",
 };

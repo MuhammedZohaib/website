@@ -7,7 +7,7 @@ export default function Services() {
       <section className="relative h-[40vh] flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/placeholder.svg?height=600&width=1600"
+            src="/hero.svg"
             alt="Background"
             fill
             className="object-cover opacity-30"

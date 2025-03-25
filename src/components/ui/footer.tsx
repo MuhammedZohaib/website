@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Twitter, Linkedin, Github } from "lucide-react";
 
 export default function Footer() {
@@ -8,13 +9,18 @@ export default function Footer() {
     <footer className="bg-zinc-950 border-t border-zinc-900">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Logo and Info */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center">
               <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
-                <span className="text-black font-bold text-lg">YN</span>
+                <span className="text-black font-bold text-lg">
+                  <Image
+                    src={"/logo.svg"}
+                    width={25}
+                    height={25}
+                    alt={""}
+                  ></Image>
+                </span>
               </div>
-              <span className="ml-2 font-bold text-lg">YourName</span>
             </Link>
             <p className="mt-4 text-gray-400 text-sm">
               Creating exceptional digital experiences through innovative design
@@ -68,9 +74,9 @@ export default function Footer() {
           <div>
             <h3 className="font-bold mb-4">Contact</h3>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li>hello@yourname.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>San Francisco, CA</li>
+              <li>alizuhaib828@gmail.com</li>
+              <li>+92 (344) 2709695</li>
+              <li>Lahore, Pakistan</li>
             </ul>
 
             <div className="mt-6">
@@ -119,7 +125,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm">
-            © {currentYear} YourName. All rights reserved.
+            © {currentYear} Zohaib. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0">
             <ul className="flex space-x-6">
