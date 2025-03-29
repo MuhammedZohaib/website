@@ -1,5 +1,4 @@
 import type React from "react";
-import type { Metadata } from "next";
 import { Barlow } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/ui/header";
@@ -10,10 +9,10 @@ const barlow = Barlow({
   weight: ["400", "700"],
 });
 
-export const metadata: Metadata = {
-  title: "Zohaib | Portfolio",
+export const metadata = {
+  title: "Data Science & ML Portfolio",
   description:
-    "Personal portfolio showcasing my skills, projects, and experience",
+    "Portfolio showcasing data science and machine learning projects",
 };
 
 export default function RootLayout({
@@ -27,7 +26,8 @@ export default function RootLayout({
         className={`${barlow.className} bg-black text-white min-h-screen flex flex-col`}
       >
         <Header />
-        <main className="flex-grow">{children}</main>
+        <main className="flex-grow pt-16">{children}</main>{" "}
+        {/* Added pt-16 for header spacing */}
         <Footer />
       </body>
     </html>
