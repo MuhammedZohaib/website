@@ -38,7 +38,9 @@ export default function Contact() {
   };
 
   // Form input change handler
-  const handleChange = (e: { target: { id: any; value: any } }) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { id, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -47,7 +49,7 @@ export default function Contact() {
   };
 
   // Radio button change handler
-  const handleRadioChange = (value: any) => {
+  const handleRadioChange = (value: string) => {
     setFormData((prev) => ({
       ...prev,
       contactReason: value,
@@ -55,7 +57,7 @@ export default function Contact() {
   };
 
   // Slider change handler
-  const handleSliderChange = (value: any[]) => {
+  const handleSliderChange = (value: number[]) => {
     setFormData((prev) => ({
       ...prev,
       budget: value[0],
