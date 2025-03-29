@@ -133,7 +133,7 @@ export default function Work() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              I've built AI-driven solutions, predictive models, and data
+              I&apos;ve built AI-driven solutions, predictive models, and data
               science applications across multiple domains. Here are some of my
               research and development highlights:
             </motion.p>
@@ -205,9 +205,9 @@ export default function Work() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              I'm always open to discussing new AI, ML, and data science
-              research opportunities. Let's collaborate and transform your data
-              into actionable insights!
+              I&apos;m always open to discussing new AI, ML, and data science
+              research opportunities. Let&apos;s collaborate and transform your
+              data into actionable insights!
             </motion.p>
             <motion.div
               initial={{ y: 20, opacity: 0 }}

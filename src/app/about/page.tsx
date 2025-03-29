@@ -84,7 +84,7 @@ export default function About() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 }}
                 >
-                  I'm a data scientist and machine learning engineer with a
+                  I&apos;m a data scientist and machine learning engineer with a
                   passion for extracting meaningful insights from complex
                   datasets. With expertise in statistical analysis, predictive
                   modeling, and deep learning, I develop intelligent solutions

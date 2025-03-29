@@ -120,9 +120,9 @@ export default function Home() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              I'm a Data Scientist and Machine Learning Engineer specializing in
-              creating intelligent solutions through innovative algorithms and
-              data-driven approaches.
+              I&apos;m a Data Scientist and Machine Learning Engineer
+              specializing in creating intelligent solutions through innovative
+              algorithms and data-driven approaches.
             </motion.p>
             <motion.div
               initial={{ y: 30, opacity: 0 }}
@@ -169,7 +169,7 @@ export default function Home() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.1 }}
                 >
-                  I'm a skilled Data Scientist with expertise in developing
+                  I&apos;m a skilled Data Scientist with expertise in developing
                   machine learning models, statistical analysis, and data
                   visualization. With a strong foundation in both theoretical
                   concepts and practical applications, I bring a unique
@@ -362,8 +362,8 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              Have a data challenge or ML project in mind? I'd love to hear
-              about it. Let's discuss how we can leverage data science to
+              Have a data challenge or ML project in mind? I&apos;d love to hear
+              about it. Let&apos;s discuss how we can leverage data science to
               achieve your goals.
             </motion.p>
             <motion.div
