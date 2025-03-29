@@ -1,13 +1,7 @@
 "use client";
-
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-
-export const metadata = {
-  title: "Page Not Found",
-  description: "Sorry, the page you are looking for does not exist.",
-};
 
 export default function NotFound() {
   return (
