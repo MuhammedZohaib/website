@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://yourwebsite.com";
+  const baseUrl = "https://zoha1b.vercel.app";
 
   // Define all your routes
   const routes = [
