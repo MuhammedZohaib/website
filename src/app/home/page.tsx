@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import {
   Brain,
   Database,
@@ -21,18 +21,22 @@ import StaggeredChildren from "@/components/staggered-children";
 export default function Home() {
   // Typewriter effect using useState and useEffect
   const [text, setText] = useState("Data Science");
-  const phrases = [
-    "Data Science",
-    "Machine Learning",
-    "AI Solutions",
-    "Predictive Analytics",
-  ];
+
   const [index, setIndex] = useState(0);
   const [subIndex, setSubIndex] = useState(0);
   const [reverse, setReverse] = useState(false);
   const [blink, setBlink] = useState(true);
 
-  // Typewriter effect
+  const phrases = useMemo(
+    () => [
+      "Data Science",
+      "Machine Learning",
+      "AI Solutions",
+      "Predictive Analytics",
+    ],
+    []
+  );
+
   useEffect(() => {
     if (subIndex === phrases[index].length + 1 && !reverse) {
       setReverse(true);
