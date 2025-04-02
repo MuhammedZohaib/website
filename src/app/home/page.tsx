@@ -108,9 +108,10 @@ export default function Home() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Transforming Data <br />
+              Transforming Data into
+              <br />
               <span className="text-primary">
-                into {text}
+                {text}
                 <span className={`${blink ? "opacity-100" : "opacity-0"}`}>
                   _
                 </span>
